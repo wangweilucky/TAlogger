@@ -88,18 +88,19 @@ FMDatabase *__ta_db;
     [NSClassFromString(@"TDAbstractLogger") aspect_hookSelector:@selector(logMessage:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo) {
         NSLog(@"%@: ######### type:%@ message:%@", aspectInfo.instance, [aspectInfo.arguments.lastObject valueForKey:@"type"], [aspectInfo.arguments.lastObject valueForKey:@"message"]);
         
-        static dispatch_once_t onceToken;
-        static DDFileLogger *fileLogger;
-        dispatch_once(&onceToken, ^{
-            fileLogger = [[DDFileLogger alloc] init]; // File Logger
-            fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
-            fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-        });
+//        static dispatch_once_t onceToken;
+//        static DDFileLogger *fileLogger;
+//        dispatch_once(&onceToken, ^{
+//            fileLogger = [[DDFileLogger alloc] init]; // File Logger
+//            fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+//            fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+//        });
+        //        NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+        //        [fileLogger performSelector:@selector(logData:) withObject:data];
         
         NSString *message = (NSString *)[aspectInfo.arguments.lastObject valueForKey:@"message"];
         NSInteger type = [[aspectInfo.arguments.lastObject valueForKey:@"type"] integerValue];
-//        NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
-//        [fileLogger performSelector:@selector(logData:) withObject:data];
+
         
         message = [NSString stringWithFormat:@"[THINKING] %@", message];
         
