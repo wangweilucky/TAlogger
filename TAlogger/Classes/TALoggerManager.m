@@ -8,8 +8,8 @@
 
 #import "TALoggerManager.h"
 #import "Aspects.h"
-#import <CocoaLumberjack/DDFileLogger.h>
-#import <CocoaLumberjack/DDLog.h>
+// #import <CocoaLumberjack/DDFileLogger.h>
+// #import <CocoaLumberjack/DDLog.h>
 #import <FMDB.h>
 #import "TALoggerController.h"
 
