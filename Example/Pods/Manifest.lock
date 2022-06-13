@@ -1,0 +1,16 @@
+PODS:
+  - TAlogger (0.1.0)
+
+DEPENDENCIES:
+  - TAlogger (from `../`)
+
+EXTERNAL SOURCES:
+  TAlogger:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TAlogger: 234aab272dcfa45d842b02e50b84aab837a1581d
+
+PODFILE CHECKSUM: 2253ef2c7e2441607ea31972f18eb11876a0ca36
+
+COCOAPODS: 1.11.0
