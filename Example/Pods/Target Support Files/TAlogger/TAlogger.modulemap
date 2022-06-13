@@ -1,6 +1,0 @@
-framework module TAlogger {
-  umbrella header "TAlogger-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-use_frameworks!
-target 'TAlogger_Tests' do
-  pod 'TAlogger', :path => '../'
-  
-  
-end
